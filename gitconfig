@@ -2,4 +2,4 @@
 	name = Noelle Leigh
 	email = noelle_leigh@fastmail.com
 [core]
-	editor = code
+	editor = code --wait
