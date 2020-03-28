@@ -5,4 +5,8 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
+    ~/.git-prompt.sh: git-prompt.sh
+    ~/.zsh-nvm:
+        create: true
+        path: zsh-nvm
     ~/.zshrc: zshrc
