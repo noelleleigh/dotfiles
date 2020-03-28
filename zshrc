@@ -25,6 +25,9 @@ setopt HIST_VERIFY
 
 setopt CORRECT
 
+# Crostini support (https://www.reddit.com/r/Crostini/comments/8ghl1a/x11_apps_dont_work_if_you_change_the_default_shell/dybtuzs?utm_source=share&utm_medium=web2x)
+export DISPLAY=:0
+
 # Set Editor
 VISUAL=code
 
