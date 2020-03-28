@@ -32,7 +32,7 @@ export DISPLAY=:0
 VISUAL=code
 
 # Useful aliases
-alias ll="ls -lhaGF"
+alias ll="ls -lhaGF --color=auto"
 alias profile_reload="source ~/.zshrc"
 
 # case insensitive path-completion
