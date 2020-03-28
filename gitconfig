@@ -3,3 +3,5 @@
 	email = noelle_leigh@fastmail.com
 [core]
 	editor = code --wait
+[credential]
+	helper = cache --timeout=3600
