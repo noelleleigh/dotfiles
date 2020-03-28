@@ -24,7 +24,6 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
 setopt CORRECT
-setopt CORRECT_ALL
 
 # Set Editor
 VISUAL=code
@@ -41,8 +40,17 @@ autoload bashcompinit && bashcompinit
 # Start the completion system
 autoload -Uz compinit && compinit
 
+# Git prompt
+source ~/.git-prompt.sh
+setopt PROMPT_SUBST
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=0
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="auto"
+
 # Setup prompt
-PROMPT='%B%F{178}>%f%b %F{63}%~%f %F{129}%#%f '
+NEWLINE=$'\n'
+PROMPT='%B%F{178}@%f%b %F{69}%~%f %F{178}$(__git_ps1 " (%s)")%f${NEWLINE}%B%F{178}>%f%b %F{129}%#%f '
 RPROMPT='%*'
 
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
