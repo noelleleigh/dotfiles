@@ -9,4 +9,5 @@
     ~/.zsh-nvm:
         create: true
         path: zsh-nvm
+    ~/.zprofile: zprofile
     ~/.zshrc: zshrc
