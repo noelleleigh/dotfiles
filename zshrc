@@ -57,3 +57,6 @@ PROMPT='%B%F{178}@%f%b %F{69}%~%f %F{178}$(__git_ps1 " (%s)")%f${NEWLINE}%B%F{17
 RPROMPT='%*'
 
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+
+# Use bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
