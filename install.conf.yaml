@@ -4,12 +4,21 @@
 
 - clean: ['~']
 
+- shell:
+  - 
+    command: curl -L -o extras/git/git-prompt.sh https://github.com/git/git/raw/master/contrib/completion/git-prompt.sh
+    description: Updating git-prompt.sh
+  - 
+    command: curl -L -o extras/git/git-completion.bash https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
+    description: Updating git-completion.bash
+
+
 - link:
     ~/.bashrc: .bashrc
     ~/.profile: .profile
     ~/.gitconfig: .gitconfig
-    ~/git-completion.bash: extras/git/git-completion.bash
     ~/git-prompt.sh: extras/git/git-prompt.sh
+    ~/git-completion.bash: extras/git/git-completion.bash
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
