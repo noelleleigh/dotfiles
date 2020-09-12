@@ -8,8 +8,7 @@
     ~/.bashrc: .bashrc
     ~/.profile: .profile
     ~/.gitconfig: .gitconfig
-
-
+    ~/git-completion.bash: extras/git/git-completion.bash
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
