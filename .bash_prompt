@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Git setup
+. ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# Colors
+BLUE="[01;34m"
+YELLOW="[01;33m"
+
+# Build the prompt
+
+PS1="@ \[\e$BLUE\]\w\[\e[00m\]"
+PS1="$PS1\[\e$YELLOW\]$(__git_ps1 " (%s)")\[\e[00m\]"
+export PS1="$PS1 \$ "

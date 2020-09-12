@@ -116,6 +116,6 @@ fi
 . ~/.git-completion.bash
 
 # Prompt
-. ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\w$(__git_ps1 " (%s)")\$ '
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
+fi
