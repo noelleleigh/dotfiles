@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+if [ -f ~/.aliases.sh ]; then
+    . ~/.aliases.sh
+fi
+
+alias profile_reload="source ~/.zshrc"

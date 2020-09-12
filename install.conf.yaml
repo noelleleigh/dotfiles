@@ -29,7 +29,9 @@
     ~/.bashrc: .bashrc
 
     # Zsh
+    ~/.zsh_aliases: .zsh_aliases
     ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
