@@ -14,14 +14,19 @@
 
 
 - link:
-    # Bash
-    ~/.bashrc: .bashrc
-    ~/.profile: .profile
-    
+    # General
+    ~/.aliases.sh: .aliases.sh
+
     # Git
     ~/.gitconfig: .gitconfig
     ~/.git-prompt.sh: extras/git/git-prompt.sh
     ~/.git-completion.bash: extras/git/git-completion.bash
+
+    # Bash
+    ~/.bashrc: .bashrc
+    ~/.profile: .profile
+    ~/.bash_aliases: .bash_aliases
+    ~/.bash_prompt: .bash_prompt
 
     # Zsh
     ~/.zprofile: .zprofile
