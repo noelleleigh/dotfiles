@@ -23,10 +23,10 @@
     ~/.git-completion.bash: extras/git/git-completion.bash
 
     # Bash
-    ~/.bashrc: .bashrc
-    ~/.profile: .profile
     ~/.bash_aliases: .bash_aliases
     ~/.bash_prompt: .bash_prompt
+    ~/.profile: .profile
+    ~/.bashrc: .bashrc
 
     # Zsh
     ~/.zprofile: .zprofile
