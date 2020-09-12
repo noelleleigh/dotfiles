@@ -14,11 +14,17 @@
 
 
 - link:
+    # Bash
     ~/.bashrc: .bashrc
     ~/.profile: .profile
+    
+    # Git
     ~/.gitconfig: .gitconfig
-    ~/git-prompt.sh: extras/git/git-prompt.sh
-    ~/git-completion.bash: extras/git/git-completion.bash
+    ~/.git-prompt.sh: extras/git/git-prompt.sh
+    ~/.git-completion.bash: extras/git/git-completion.bash
+
+    # Zsh
+    ~/.zprofile: .zprofile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

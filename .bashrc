@@ -113,9 +113,9 @@ if ! shopt -oq posix; then
 fi
 
 # Git completion
-. ~/git-completion.bash
+. ~/.git-completion.bash
 
 # Prompt
-. ~/git-prompt.sh
+. ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\w$(__git_ps1 " (%s)")\$ '
