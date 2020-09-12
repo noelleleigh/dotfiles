@@ -40,3 +40,11 @@ fi
 if [ -f ~/.zsh_prompt ]; then
     . ~/.zsh_prompt
 fi
+
+# case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
+# load bashcompinit for some old bash completions
+autoload bashcompinit && bashcompinit
+
+# Start the completion system
+autoload -Uz compinit && compinit
