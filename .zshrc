@@ -35,3 +35,8 @@ VISUAL=code
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
+
+# Prompt
+if [ -f ~/.zsh_prompt ]; then
+    . ~/.zsh_prompt
+fi

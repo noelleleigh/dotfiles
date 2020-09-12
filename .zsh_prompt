@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+# Git setup
+source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=0
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="auto"
+
+setopt PROMPT_SUBST; 
+
+NEWLINE=$'\n'
+# Current directory
+PROMPT='%B%F{178}@%f%b'
+# Git prompt
+PROMPT="$PROMPT %F{69}%~%f %F{178}$(__git_ps1 " (%s)")%f"
+# New line
+PROMPT="$PROMPT ${NEWLINE}"
+# Final prompt
+PROMPT="$PROMPT%B%F{178}>%f%b %F{129}%#%f "
+
+
+# Time on the right
+RPROMPT='%*'

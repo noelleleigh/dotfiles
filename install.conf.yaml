@@ -30,6 +30,7 @@
 
     # Zsh
     ~/.zsh_aliases: .zsh_aliases
+    ~/.zsh_prompt: .zsh_prompt
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
 
