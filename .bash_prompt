@@ -2,7 +2,10 @@
 
 # Git setup
 . ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=0
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="auto"
 
 # Colors
 # https://misc.flogisoft.com/bash/tip_colors_and_formatting
