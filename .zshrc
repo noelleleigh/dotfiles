@@ -36,9 +36,14 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+autoload -Uz promptinit
+promptinit
+
 # Prompt
 if [ -f ~/.zsh_prompt ]; then
-    . ~/.zsh_prompt
+    precmd() {
+        . ~/.zsh_prompt
+    }
 fi
 
 # case insensitive path-completion

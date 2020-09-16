@@ -9,17 +9,21 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 setopt PROMPT_SUBST; 
 
-# Figure out updating using https://stackoverflow.com/a/5380073
-NEWLINE=$'\n'
-# Current directory
-WORKING_DIR='%B%F{178}@%f%b %F{69}%~%f'
-# Git prompt
-GIT_PROMPT="%F{178}$(__git_ps1 " (%s)")%f"
-# Prompt input line
-PROMPT_INPUT_LINE='%B%F{178}>%f%b %F{129}%#%f'
+# Colors
+YELLOW="%F{178}"
+BLUE="%F{69}"
+PURPLE="%F{129}"
 
-PS1="$WORKING_DIR $GITPROMPT$NEWLINE$PROMPT_INPUT_LINE "
+# Current directory
+WORKING_DIR="${YELLOW}%B@%b%f ${BLUE}%~%f"
+# Git prompt
+GIT_PROMPT="${YELLOW}$(__git_ps1 "(%s)")%f"
+# Prompt input line
+PROMPT_INPUT_LINE="${YELLOW}%B>%b%f ${PURPLE}%#%f"
+
+PS1="${WORKING_DIR} ${GIT_PROMPT}
+${PROMPT_INPUT_LINE} "
 
 
 # Time on the right
-RPROMPT='%*'
+RPS1='%*'
