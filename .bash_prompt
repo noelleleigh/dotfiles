@@ -6,6 +6,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Colors
 # https://misc.flogisoft.com/bash/tip_colors_and_formatting
+BOLD="\e[1m"
 BLUE="\e[38;5;69m"
 YELLOW="\e[38;5;178m"
 PURPLE="\e[38;5;129m"
@@ -13,7 +14,7 @@ DEFAULT="\e[0m"
 
 # Build the prompt
 # https://stackoverflow.com/a/3058390
-CWD="${YELLOW}@${DEFAULT} ${BLUE}\w${DEFAULT}"
+CWD="${BOLD}${YELLOW}@${DEFAULT} ${BLUE}\w${DEFAULT}"
 GIT="${YELLOW}$(__git_ps1 "(%s)")${DEFAULT}"
-PROMPT="\n${YELLOW}>${DEFAULT} ${PURPLE}\$${DEFAULT}"
+PROMPT="\n${BOLD}${YELLOW}>${DEFAULT} ${PURPLE}\$${DEFAULT}"
 echo "${CWD} ${GIT} ${PROMPT} "
