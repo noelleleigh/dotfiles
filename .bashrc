@@ -117,5 +117,9 @@ fi
 
 # Prompt
 if [ -f ~/.bash_prompt ]; then
-    . ~/.bash_prompt
+    # https://stackoverflow.com/a/11107564
+    function prompt_command {
+        export PS1=$(~/.bash_prompt)
+    }
+    export PROMPT_COMMAND=prompt_command
 fi
