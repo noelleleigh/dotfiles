@@ -24,6 +24,7 @@
 
     # nvm
     ~/.nvm: extras/nvm
+    ~/.nvm_init: .nvm_init.sh
 
     # Bash
     ~/.bash_aliases: .bash_aliases
