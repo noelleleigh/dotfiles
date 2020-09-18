@@ -22,6 +22,9 @@
     ~/.git-prompt.sh: extras/git/git-prompt.sh
     ~/.git-completion.bash: extras/git/git-completion.bash
 
+    # nvm
+    ~/.nvm: extras/nvm
+
     # Bash
     ~/.bash_aliases: .bash_aliases
     ~/.bash_prompt: .bash_prompt
