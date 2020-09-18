@@ -5,7 +5,8 @@ These were mostly authored on a Chromebook using Crostini (Debian 10).
 ## Instructions
 
 1. Clone this repository
-2. Run the `./install` script, or run the build script in VS Code.
+1. Enter the new directory
+1. Run the `./install` script, or run the build script in VS Code.
 
 ## Libraries used
 
