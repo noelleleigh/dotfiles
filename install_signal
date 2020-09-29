@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Source: https://signal.org/download/
+
+ if [ $(id -u) -ne 0 ]; then
+    echo "ERROR: This installation needs to be run as root."
+    exit 1
+fi
+
+# Add Open Whisper Systems' key
+curl -s -o /etc/apt/trusted.gpg.d/whispersystems.asc https://updates.signal.org/desktop/apt/keys.asc
+
+# Add the signal apt source
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" > /etc/apt/sources.list.d/signal-xenial.list
+
+# Update the repos and install
+sudo apt update -qq && sudo apt install signal-desktop
