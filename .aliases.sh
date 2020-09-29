@@ -5,4 +5,5 @@ alias ll="\
     --group-directories-first \
     -g \
     -h \
-    --classify"
+    --classify \
+    --color"
