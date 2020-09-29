@@ -128,3 +128,8 @@ fi
 if [ -f ~/.nvm_init ]; then
     . ~/.nvm_init
 fi
+
+# Set bat as the MANPAGER if it exists
+if [ -n "$(type -t bat)" ]; then
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
