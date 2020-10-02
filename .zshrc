@@ -63,3 +63,10 @@ fi
 if [ -n "$(type -w bat)" ]; then
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
+
+# pyenv
+if [ -d ~/.pyenv ]; then
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
