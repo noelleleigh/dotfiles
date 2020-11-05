@@ -3,3 +3,5 @@
 	email = noelle_leigh@fastmail.com
 [alias]
 	glog = log --all --decorate --oneline --graph
+[core]
+	editor = code --wait
