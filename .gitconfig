@@ -5,3 +5,8 @@
 	glog = log --all --decorate --oneline --graph
 [core]
 	editor = code --wait
+[sendemail]
+	smtpserver = smtp.fastmail.com
+	smtpuser = noelle_leigh@fastmail.com
+	smtpencryption = tls
+	smtpserverport = 587
