@@ -135,8 +135,6 @@ if [ -n "$(type -t bat)" ]; then
 fi
 
 # pyenv
-if [ -d ~/.pyenv ]; then
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+if [ -d ~/.pyenv_init ]; then
+    . ~/.pyenv_init
 fi
