@@ -7,7 +7,7 @@
 	path = extras/nvm
 	url = https://github.com/nvm-sh/nvm
 	branch = master
-[submodule "pyenv"]
+[submodule "extras/pyenv"]
 	path = extras/pyenv
 	url = https://github.com/pyenv/pyenv
 	branch = master
