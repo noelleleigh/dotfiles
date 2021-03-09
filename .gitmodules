@@ -1,7 +1,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+	branch = master
 	ignore = dirty
 [submodule "extras/nvm"]
 	path = extras/nvm
 	url = https://github.com/nvm-sh/nvm.git
+	branch = master
