@@ -68,3 +68,8 @@ fi
 if [ -f ~/.pyenv_init ]; then
     . ~/.pyenv_init
 fi
+
+# Bitwarden CLI tab completion
+if [ -n "$(type -w bw)" ]; then
+    eval "$(bw completion --shell zsh); compdef _bw bw;"
+fi
