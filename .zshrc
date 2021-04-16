@@ -60,7 +60,7 @@ if [ -f ~/.nvm_init ]; then
 fi
 
 # Set bat as the MANPAGER if it exists
-if [ -n "$(type -w bat)" ]; then
+if command -v bat &> /dev/null; then
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
@@ -70,6 +70,6 @@ if [ -f ~/.pyenv_init ]; then
 fi
 
 # Bitwarden CLI tab completion
-if [ -n "$(type -w bw)" ]; then
+if command -v bw &> /dev/null; then
     eval "$(bw completion --shell zsh); compdef _bw bw;"
 fi
