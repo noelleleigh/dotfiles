@@ -15,6 +15,11 @@
       curl -L -o extras/git/git-completion.bash
       https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
     description: Updating git-completion.bash
+  -
+    command: >
+      curl -L -o extras/git/git-completion.zsh
+      https://github.com/git/git/raw/master/contrib/completion/git-completion.zsh
+    description: Updating git-completion.zsh
 
 
 - link:
@@ -26,6 +31,9 @@
     ~/.gitconfig: .gitconfig
     ~/.git-prompt.sh: extras/git/git-prompt.sh
     ~/.git-completion.bash: extras/git/git-completion.bash
+    ~/.zsh/_git:
+      path: extras/git/git-completion.zsh
+      create: true
 
     # nvm
     ~/.nvm: extras/nvm
