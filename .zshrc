@@ -2,8 +2,6 @@
 # origin: https://scriptingosx.com/2019/06/moving-to-zsh-part-3-shell-options/
 # case-insensitive globbing
 setopt NO_CASE_GLOB
-# don't require cd to move
-setopt AUTO_CD
 
 SAVEHIST=5000
 HISTSIZE=2000
@@ -17,7 +15,7 @@ setopt INC_APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 # do not store duplications
 setopt HIST_IGNORE_DUPS
-#ignore duplicates when searching
+# ignore duplicates when searching
 setopt HIST_FIND_NO_DUPS
 # removes blank lines from history
 setopt HIST_REDUCE_BLANKS
