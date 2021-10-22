@@ -21,6 +21,16 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
+# https://jdhao.github.io/2021/03/24/zsh_history_setup/#history-settings
+# the detailed meaning of the below three variable can be found in `man zshparam`.
+export HISTFILE=~/.histfile
+export HISTSIZE=1000000   # the number of items for the internal history list
+export SAVEHIST=1000000   # maximum number of items for the history file
+# The meaning of these options can be found in man page of `zshoptions`.
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
+setopt EXTENDED_HISTORY  # record command start time
+
 setopt CORRECT
 
 # Crostini support (https://www.reddit.com/r/Crostini/comments/8ghl1a/x11_apps_dont_work_if_you_change_the_default_shell/dybtuzs?utm_source=share&utm_medium=web2x)
@@ -55,6 +65,15 @@ autoload bashcompinit && bashcompinit
 
 # Start the completion system
 autoload -Uz compinit && compinit
+
+# Better history search
+# https://unix.stackexchange.com/a/97844
+# https://unix.stackexchange.com/a/405358
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "$key[Up]" history-beginning-search-backward-end
+bindkey "$key[Down]" history-beginning-search-forward-end
 
 # nvm
 if [ -f ~/.nvm_init ]; then
