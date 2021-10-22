@@ -7,3 +7,7 @@ alias ll="\
     -h \
     --classify \
     --color"
+
+# https://linux.m2osw.com/how-remove-ffmpeg-ffprobe-stupid-banner
+alias ffmpeg="ffmpeg -hide_banner"
+alias ffprobe="ffprobe -hide_banner"
