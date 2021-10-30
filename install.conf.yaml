@@ -8,17 +8,17 @@
   -
     command: >
       curl -L --create-dirs -o extras/git/git-prompt.sh
-      https://github.com/git/git/raw/master/contrib/completion/git-prompt.sh
+      https://github.com/git/git/raw/$(git version | sed 's/git version /v/')/contrib/completion/git-prompt.sh
     description: Updating git-prompt.sh
   -
     command: >
       curl -L --create-dirs -o extras/git/git-completion.bash
-      https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
+      https://github.com/git/git/raw/$(git version | sed 's/git version /v/')/contrib/completion/git-completion.bash
     description: Updating git-completion.bash
   -
     command: >
       curl -L --create-dirs -o extras/git/git-completion.zsh
-      https://github.com/git/git/raw/master/contrib/completion/git-completion.zsh
+      https://github.com/git/git/raw/$(git version | sed 's/git version /v/')/contrib/completion/git-completion.zsh
     description: Updating git-completion.zsh
 
 
