@@ -15,3 +15,5 @@
 	enabled = true
 [pull]
 	rebase = false
+[commit]
+	verbose = true
