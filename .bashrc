@@ -135,6 +135,6 @@ if [ -n "$(type -t bat)" ]; then
 fi
 
 # pyenv
-if [ -d ~/.pyenv_init ]; then
+if [ -f ~/.pyenv_init ]; then
     . ~/.pyenv_init
 fi
