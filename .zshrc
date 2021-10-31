@@ -94,3 +94,8 @@ fi
 if command -v bw &> /dev/null; then
     eval "$(bw completion --shell zsh); compdef _bw bw;"
 fi
+
+# SSH Agent
+if [ -f ~/.ssh-agent ]; then
+    . ~/.ssh-agent
+fi

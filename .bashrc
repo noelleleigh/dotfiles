@@ -138,3 +138,8 @@ fi
 if [ -f ~/.pyenv_init ]; then
     . ~/.pyenv_init
 fi
+
+# SSH Agent
+if [ -f ~/.ssh-agent ]; then
+    . ~/.ssh-agent
+fi

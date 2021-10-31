@@ -25,7 +25,7 @@
 - link:
     # General
     ~/.aliases.sh: .aliases.sh
-    ~/.ssh-agent.sh: .ssh-agent.sh
+    ~/.ssh-agent: .ssh-agent.sh
 
     # Git
     ~/.gitconfig: .gitconfig
