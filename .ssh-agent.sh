@@ -1,9 +1,11 @@
 #!/bin/bash
-# Start SSH Agent
+# Start SSH Agent if it's not already running.
 # https://wiki.archlinux.org/title/SSH_keys#ssh-agent
+DIR="$HOME/.config" && mkdir -p $DIR
+FILENAME="ssh-agent.env"
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+    ssh-agent > "$DIR/FILENAME"
 fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+    source "$DIR/FILENAME" >/dev/null
 fi
