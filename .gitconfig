@@ -12,6 +12,7 @@
 	smtpencryption = tls
 	smtpserverport = 587
 	assume8bitEncoding = utf-8
+	annotate = yes
 [rerere]
 	enabled = true
 [pull]
