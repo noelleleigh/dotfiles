@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Source: https://signal.org/download/
 
@@ -8,7 +9,9 @@
 fi
 
 # Add Open Whisper Systems' key
-curl -s -o /etc/apt/trusted.gpg.d/whispersystems.asc https://updates.signal.org/desktop/apt/keys.asc
+curl --show-error --silent --fail \
+    -o /etc/apt/trusted.gpg.d/whispersystems.asc \
+    https://updates.signal.org/desktop/apt/keys.asc
 
 # Add the signal apt source
 echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" > /etc/apt/sources.list.d/signal-xenial.list
