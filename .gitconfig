@@ -2,7 +2,7 @@
 	name = Noelle Leigh
 	email = noelle_leigh@fastmail.com
 [alias]
-	glog = log --all --decorate --oneline --graph
+	glog = "log --graph --date=short --format=format:'%C(auto)%h %C(blue)%ad %C(auto)%s%d'"
 [core]
 	editor = code --wait
 	excludesFile = ~/.gitignore
